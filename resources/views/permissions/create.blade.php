@@ -16,7 +16,7 @@
                             
                         </div>
 
-                        @error('name')
+                        @error('parent_name')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
@@ -64,7 +64,7 @@
             var rdiv = "removeclass" + room;
             divtest.innerHTML =
 
-                '<label class="form-label">Sub Permission Name</label><div class="d-flex gap-2"> <input type="text" name="sub_permissions[]" id="" class="form-control" placeholder="please enter permission..." required> <button class="btn btn-danger" type="button" onclick="remove_education_fields(' +
+                '<label class="form-label">Permission Name</label><div class="d-flex gap-2"> <input type="text" name="sub_permissions[]" id="" class="form-control" placeholder="please enter permission..." required> <button class="btn btn-danger" type="button" onclick="remove_education_fields(' +
                 room + ');"> <i class="ti ti-minus"></i> </button> </div></div>';
 
             objTo.appendChild(divtest);

@@ -11,7 +11,13 @@
                 <div id="education_fields" class="my-4"></div>
                 <div class="row">
                     <div class="mb-3">
-                        <label for="permission" class="form-label">Permission Name</label>
+                        <label for="permission" class="form-label">
+                            @if ($permission->parent_id === null)
+                                Parent Permission Name
+                            @else
+                                Permission Name
+                            @endif
+                        </label>
                         <div class="">
                             <input type="name" name="name" class="form-control  @error('name') is-invalid @enderror"
                                 id="permission" placeholder="please enter permission..."
@@ -23,7 +29,7 @@
                     </div>
                     @foreach ($permission->children as $child)
                         <div class="mb-3">
-                            <label for="permission" class="form-label">Sub Permission Name</label>
+                            <label for="permission" class="form-label">Permission Name</label>
                             <div class="">
                                 <input type="name" name="name"
                                     class="form-control  @error('name') is-invalid @enderror" id="permission"
